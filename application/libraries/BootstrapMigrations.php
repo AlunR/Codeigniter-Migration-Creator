@@ -17,7 +17,7 @@ class BootstrapMigrations {
     
     }
 
-	function create_migration($ver = '001')
+	function create_migration()
 	{
 
 		$tables = $this->CI->db->list_tables();
@@ -49,7 +49,7 @@ class BootstrapMigrations {
 
 defined(\'BASEPATH\') OR exit(\'No direct script access allowed\');
 
-class Migration_BootstrapMigrations extends CI_Migration {
+class Migration_BootstrapMigration extends CI_Migration {
 
         public function up()
         {
@@ -74,7 +74,7 @@ class Migration_BootstrapMigrations extends CI_Migration {
 }
 ';
 
-		file_put_contents(APPPATH.'/migrations/'.$ver.'_BootstrapMigrations.php', $data);
+		file_put_contents(APPPATH.'/migrations/001_BootstrapMigration.php', $data);
 
 	}
 
@@ -128,6 +128,7 @@ class Migration_BootstrapMigrations extends CI_Migration {
                 $this->outputdata[] = "),";					
 
 			}
+	        $this->outputdata[] = '));';
 
 
 			foreach($fields as $field)
@@ -149,7 +150,6 @@ class Migration_BootstrapMigrations extends CI_Migration {
 
 			}
 
-	        $this->outputdata[] = '));';
             $this->outputdata[] = '$this->CI->dbforge->create_table(\''.$tablename.'\');';
 
 		}
