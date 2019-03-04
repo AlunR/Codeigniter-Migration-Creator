@@ -1,4 +1,4 @@
-# Bootstrap Migrations for Codeigniter v3
+# Database Migrations for Codeigniter v3
 
 This CI library provides a simple way to bring datastructures into Codeigniter to get you started migrating a legacy project.
 
