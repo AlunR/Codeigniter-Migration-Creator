@@ -1,6 +1,6 @@
 # Database Migrations for Codeigniter v3
 
-This CI library provides a simple way to bring datastructures into Codeigniter to get you started migrating a legacy project.
+This CI library provides a simple way to bring datastructures into Codeigniter v3 to get you started migrating a legacy project.
 
 ## Usage
 
